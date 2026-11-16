@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Craft</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <nav id="mainNav" class="navbar navbar-expand-lg fixed-top custom-navbar">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#perfil">
+                    <img src="img/code.png" alt="Code Craft Logo" class="navbar-logo">
+                    <span class="brand-text fs-4">Code<span class="text-accent">Craft</span></span>
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#perfil">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#acerca">Acerca de mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <button id="themeToggle" class="btn btn-outline-secondary rounded-circle p-2 lh-1" title="Cambiar tema">
+                            <i class="bi bi-sun-fill" id="themeIcon"></i>
+                        </button>
+                        <a href="#contacto" class="btn btn-primary rounded-pill px-4 fw-semibold">
+                            Hablemos <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="perfil" class="hero-section d-flex align-items-center min-vh-100 pt-5">
+        <div class="container py-5">
+            <div class="row align-items-center gy-5">
+                
+                <div class="col-lg-5 text-center order-1 order-lg-2">
+                    <div class="profile-img-wrapper mx-auto">
+                        <img src="img/perfil.png" alt="Benjamín - Programador" class="img-fluid rounded-circle profile-img">
+                    </div>
+                </div>
+
+                <div class="col-lg-7 order-2 order-lg-1 text-center text-lg-start">
+                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 mb-3">
+                        <i class="bi bi-code-slash me-1"></i> Portfolio Oficial 2026
+                    </span>
+                    
+                    <h1 class="display-3 fw-bold mb-2">
+                        Hola, soy <span class="text-gradient">Benjamín</span>
+                    </h1>
+
+                    <h2 class="h4 text-secondary mb-4 font-monospace" style="min-height: 32px;">
+                        &gt; <span id="typewriter"></span><span class="cursor">|</span>
+                    </h2>
+
+                    <p class="lead text-body-secondary mb-4">
+                        Escribo código limpio, eficiente y estructurado para construir soluciones digitales modernas. Transformo ideas en experiencias web interactivas de alto impacto visual.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 mb-4">
+                        <span class="tech-badge"><i class="bi bi-filetype-html text-danger"></i> HTML5 & CSS3</span>
+                        <span class="tech-badge"><i class="bi bi-bootstrap-fill text-purple"></i> Bootstrap 5</span>
+                        <span class="tech-badge"><i class="bi bi-filetype-js text-warning"></i> JavaScript</span>
+                        <span class="tech-badge"><i class="bi bi-stars text-info"></i> IA Generativa</span>
+                    </div>
+
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3">
+                        <a href="https://github.com/Pera-pro" target="_blank" class="social-btn" title="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="mailto:bfernandezperotti@stbrendans.edu.ar" class="social-btn" title="Enviarme un correo">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+                        <a href="#portfolio" class="btn btn-outline-primary rounded-pill px-4 d-flex align-items-center">
+                            Ver mis proyectos
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="proyectos-seccion" id="portfolio">
+        <div class="container">
+            
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="seccion-titulo">Portfolio</h2>
+                    <p class="seccion-subtitulo">Evolución de mis proyectos: desde HTML puro hasta aplicaciones interactivas con JavaScript</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    
+                    <div id="carouselProyectos" class="carousel slide">
+                        
+                        <div class="carousel-inner rounded-5 shadow-lg border border-success-subtle">
+                            
+                            <div class="carousel-item active" data-html="100" data-css="0" data-js="0">
+                                <div class="proyecto-slide-card">
+                                    <div class="proyecto-slide-img-box">
+                                        <a href="https://pera-pro.github.io/miPortFolio-Benjamin-Perotti/" target="_blank">
+                                            <img src="img/unidad1.png" class="d-block w-100 proyecto-slide-img" alt="Unidad 1">
+                                        </a>
+                                    </div>
+                                    <div class="proyecto-slide-info">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                                            <h3 class="proyecto-titulo mb-0">01. Unidad 1 - Primer Sitio Web</h3>
+                                            <a href="https://pera-pro.github.io/miPortFolio-Benjamin-Perotti/" target="_blank" class="btn btn-propio btn-sm px-3 py-1 rounded-pill">
+                                                Ver proyecto <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                        <p class="proyecto-descripcion mb-0">Primer proyecto del curso entrenando la estructura semántica básica en HTML y despliegue en GitHub Pages.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-html="55" data-css="45" data-js="0">
+                                <div class="proyecto-slide-card">
+                                    <div class="proyecto-slide-img-box">
+                                        <a href="https://pera-pro.github.io/Desafio-Unidad-4/" target="_blank">
+                                            <img src="img/unidad4.png" class="d-block w-100 proyecto-slide-img" alt="Desafio Unidad 4">
+                                        </a>
+                                    </div>
+                                    <div class="proyecto-slide-info">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                                            <h3 class="proyecto-titulo mb-0">02. Desafío Unidad 4 - Formularios</h3>
+                                            <a href="https://pera-pro.github.io/Desafio-Unidad-4/" target="_blank" class="btn btn-propio btn-sm px-3 py-1 rounded-pill">
+                                                Ver proyecto <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                        <p class="proyecto-descripcion mb-0">Diseño de interfaz con múltiples formularios estilizados y estados interactivos en CSS.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-html="42" data-css="58" data-js="0">
+                                <div class="proyecto-slide-card">
+                                    <div class="proyecto-slide-img-box">
+                                        <a href="https://pera-pro.github.io/Desafio-Unidad-5/" target="_blank">
+                                            <img src="img/unidad5.png" class="d-block w-100 proyecto-slide-img" alt="Desafio Unidad 5">
+                                        </a>
+                                    </div>
+                                    <div class="proyecto-slide-info">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                                            <h3 class="proyecto-titulo mb-0">03. Desafío Unidad 5 - Tienda Celulares</h3>
+                                            <a href="https://pera-pro.github.io/Desafio-Unidad-5/" target="_blank" class="btn btn-propio btn-sm px-3 py-1 rounded-pill">
+                                                Ver proyecto <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                        <p class="proyecto-descripcion mb-0">Maquetado y diseño comercial de e-commerce aplicando modelo de caja, flex y estilos avanzados de CSS.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-html="48" data-css="52" data-js="0">
+                                <div class="proyecto-slide-card">
+                                    <div class="proyecto-slide-img-box">
+                                        <a href="https://pera-pro.github.io/Portfolio/" target="_blank">
+                                            <img src="img/portfolio-v1.png" class="d-block w-100 proyecto-slide-img" alt="Portfolio Mitad de Curso">
+                                        </a>
+                                    </div>
+                                    <div class="proyecto-slide-info">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                                            <h3 class="proyecto-titulo mb-0">04. Portfolio Mitad de Curso</h3>
+                                            <a href="https://pera-pro.github.io/Portfolio/" target="_blank" class="btn btn-propio btn-sm px-3 py-1 rounded-pill">
+                                                Ver proyecto <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                        <p class="proyecto-descripcion mb-0">Primera versión responsive de mi portfolio personal integrando grillas y componentes de Bootstrap.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-html="35" data-css="25" data-js="40">
+                                <div class="proyecto-slide-card">
+                                    <div class="proyecto-slide-img-box">
+                                        <a href="https://pera-pro.github.io/U7/" target="_blank">
+                                            <img src="img/u7.png" class="d-block w-100 proyecto-slide-img" alt="Unidad 7 JavaScript">
+                                        </a>
+                                    </div>
+                                    <div class="proyecto-slide-info">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                                            <h3 class="proyecto-titulo mb-0">05. Unidad 7 - Introducción a JS</h3>
+                                            <a href="https://pera-pro.github.io/U7/" target="_blank" class="btn btn-propio btn-sm px-3 py-1 rounded-pill">
+                                                Ver proyecto <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                        <p class="proyecto-descripcion mb-0">Primeros pasos con lógica de programación, variables, alertas e interacción dinámica con el usuario en JavaScript.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-html="30" data-css="20" data-js="50">
+                                <div class="proyecto-slide-card">
+                                    <div class="proyecto-slide-img-box">
+                                        <a href="https://pera-pro.github.io/Desafio-Unidad-9/" target="_blank">
+                                            <img src="img/unidad9.png" class="d-block w-100 proyecto-slide-img" alt="Desafío Unidad 9">
+                                        </a>
+                                    </div>
+                                    <div class="proyecto-slide-info">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                                            <h3 class="proyecto-titulo mb-0">06. Desafío Unidad 9 - Funciones & DOM</h3>
+                                            <a href="https://pera-pro.github.io/Desafio-Unidad-9/" target="_blank" class="btn btn-propio btn-sm px-3 py-1 rounded-pill">
+                                                Ver proyecto <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                        <p class="proyecto-descripcion mb-0">Desarrollo de lógica modular utilizando funciones, condicionales y manipulación de elementos web con JavaScript.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-html="28" data-css="17" data-js="55">
+                                <div class="proyecto-slide-card">
+                                    <div class="proyecto-slide-img-box">
+                                        <a href="https://pera-pro.github.io/U10_array_actividad_pt1/" target="_blank">
+                                            <img src="img/u10-p1.png" class="d-block w-100 proyecto-slide-img" alt="Unidad 10 Arrays Parte 1">
+                                        </a>
+                                    </div>
+                                    <div class="proyecto-slide-info">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                                            <h3 class="proyecto-titulo mb-0">07. Unidad 10 (Pt. 1) - Arreglos</h3>
+                                            <a href="https://pera-pro.github.io/U10_array_actividad_pt1/" target="_blank" class="btn btn-propio btn-sm px-3 py-1 rounded-pill">
+                                                Ver proyecto <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                        <p class="proyecto-descripcion mb-0">Práctica de estructuras de datos en JavaScript: creación, recorrido y gestión de listas mediante Arrays.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-html="25" data-css="15" data-js="60">
+                                <div class="proyecto-slide-card">
+                                    <div class="proyecto-slide-img-box">
+                                        <a href="https://pera-pro.github.io/U10_parte2/" target="_blank">
+                                            <img src="img/u10-p2.png" class="d-block w-100 proyecto-slide-img" alt="Unidad 10 Parte 2">
+                                        </a>
+                                    </div>
+                                    <div class="proyecto-slide-info">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                                            <h3 class="proyecto-titulo mb-0">08. Unidad 10 (Pt. 2) - Métodos de Array</h3>
+                                            <a href="https://pera-pro.github.io/U10_parte2/" target="_blank" class="btn btn-propio btn-sm px-3 py-1 rounded-pill">
+                                                Ver proyecto <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                        <p class="proyecto-descripcion mb-0">Manipulación avanzada de colecciones de datos, filtrado y transformación de información en JavaScript.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-html="22" data-css="18" data-js="60">
+                                <div class="proyecto-slide-card">
+                                    <div class="proyecto-slide-img-box">
+                                        <a href="https://pera-pro.github.io/U10-p3/" target="_blank">
+                                            <img src="img/u10-p3.png" class="d-block w-100 proyecto-slide-img" alt="Unidad 10 Parte 3">
+                                        </a>
+                                    </div>
+                                    <div class="proyecto-slide-info">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                                            <h3 class="proyecto-titulo mb-0">09. Unidad 10 (Pt. 3) - Lógica Aplicada</h3>
+                                            <a href="https://pera-pro.github.io/U10-p3/" target="_blank" class="btn btn-propio btn-sm px-3 py-1 rounded-pill">
+                                                Ver proyecto <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                        <p class="proyecto-descripcion mb-0">Resolución de desafíos algorítmicos combinando ciclos, arreglos y funciones en JavaScript.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-html="18" data-css="27" data-js="55">
+                                <div class="proyecto-slide-card">
+                                    <div class="proyecto-slide-img-box">
+                                        <a href="https://pera-pro.github.io/Color_Game/" target="_blank">
+                                            <img src="img/color-game.png" class="d-block w-100 proyecto-slide-img" alt="The Great Color Guessing Game">
+                                        </a>
+                                    </div>
+                                    <div class="proyecto-slide-info">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                                            <h3 class="proyecto-titulo mb-0">10. The Great RGB Color Game</h3>
+                                            <a href="https://pera-pro.github.io/Color_Game/" target="_blank" class="btn btn-propio btn-sm px-3 py-1 rounded-pill">
+                                                Ver proyecto <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                        <p class="proyecto-descripcion mb-0">Videojuego web interactivo para adivinar códigos de color RGB con niveles de dificultad (Easy/Hard) y manejo completo del DOM.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyectos" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProyectos" data-bs-slide="next">
+                            <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+
+                        <div class="d-flex justify-content-center align-items-center mt-3">
+                            <div class="carousel-indicators position-static m-0">
+                                <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                                <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                                <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-2">
+                        <button id="carouselPauseBtn" class="btn btn-outline-secondary btn-sm rounded-pill px-3" type="button">
+                            <i class="bi bi-pause-fill" id="carouselPauseIcon"></i> <span id="carouselPauseText">Pausar</span>
+                        </button>
+                    </div>
+
+                    <div class="github-lang-box mt-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="fw-bold small text-uppercase tracking-wider">
+                                <i class="bi bi-github me-1"></i> Lenguajes del repositorio
+                            </span>
+                            <span class="small text-secondary" id="repoSlideCounter">Proyecto 1 de 10</span>
+                        </div>
+
+                        <div class="lang-bar-track mb-3">
+                            <div id="bar-html" class="lang-segment bg-html" style="width: 100%;" title="HTML"></div>
+                            <div id="bar-css" class="lang-segment bg-css" style="width: 0%;" title="CSS"></div>
+                            <div id="bar-js" class="lang-segment bg-js" style="width: 0%;" title="JavaScript"></div>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-4 small fw-semibold">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="lang-dot bg-html"></span>
+                                <span>HTML</span>
+                                <span class="text-secondary" id="pct-html">100%</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="lang-dot bg-css"></span>
+                                <span>CSS</span>
+                                <span class="text-secondary" id="pct-css">0%</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="lang-dot bg-js"></span>
+                                <span>JavaScript</span>
+                                <span class="text-secondary" id="pct-js">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="acerca-seccion" id="acerca">
+        <div class="container">
+            
+            <div class="row mb-5">
+                <div class="col text-center">
+                    <h2 class="seccion-titulo">Acerca de mí</h2>
+                    <p class="seccion-subtitulo">Un poco sobre mi recorrido, mis herramientas y mi compañero de código</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center g-4">
+                
+                <div class="col-lg-5">
+                    <div class="acerca-bio-card">
+                        <span class="badge rounded-pill bg-success-subtle text-accent border border-success-subtle px-3 py-2 mb-3">
+                            <i class="bi bi-terminal me-1"></i> Developer en formación
+                        </span>
+                        <h3 class="fw-bold mb-3">Hola, soy Benjamín Perotti</h3>
+                        <p class="acerca-texto">
+                            Apasionado por crear interfaces web modernas, funcionales y con atención al detalle. Durante este curso pasé de escribir mis primeras etiquetas en HTML a construir aplicaciones dinámicas manipulando el DOM con JavaScript.
+                        </p>
+                        <p class="acerca-texto mb-4">
+                            Cuando no estoy programando o buscando por qué falta un punto y coma, paso el tiempo con mi perro salchicha <strong class="text-accent">Jaime</strong>, quien supervisa cada línea de código.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="skill-chip"><i class="bi bi-filetype-html text-danger"></i> HTML5</span>
+                            <span class="skill-chip"><i class="bi bi-filetype-css text-info"></i> CSS3</span>
+                            <span class="skill-chip"><i class="bi bi-bootstrap text-primary"></i> Bootstrap 5</span>
+                            <span class="skill-chip"><i class="bi bi-filetype-js text-warning"></i> JavaScript</span>
+                            <span class="skill-chip"><i class="bi bi-git text-danger"></i> Git & GitHub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="card devtools-card shadow-lg">
+                        
+                        <div class="devtools-header">
+                            <div class="devtools-dots">
+                                <span class="dot-red"></span>
+                                <span class="dot-yellow"></span>
+                                <span class="dot-green"></span>
+                            </div>
+                            <div class="devtools-tabs">
+                                <span class="dev-tab disabled"><i class="bi bi-cursor"></i> Elements</span>
+                                <span class="dev-tab active"><i class="bi bi-terminal-fill"></i> Console</span>
+                                <span class="dev-tab disabled">Sources</span>
+                                <span class="dev-tab disabled">Network</span>
+                            </div>
+                            <button id="btnClearConsole" class="btn-clear-console" title="Limpiar consola">
+                                <i class="bi bi-slash-circle"></i>
+                            </button>
+                        </div>
+
+                        <div class="devtools-body" id="consoleOutput">
+                            <div class="console-line text-muted small">
+                                <span>CodeCraft DevTools v2.6 — Seleccioná un comando debajo para ejecutarlo:</span>
+                            </div>
+                            <div class="console-line">
+                                <span class="console-prompt">&gt;</span>
+                                <span class="console-cmd">benjamin.init()</span>
+                            </div>
+                            <div class="console-response">
+                                ¡Bienvenido a mi consola interactiva! Hacé clic en cualquiera de las opciones de abajo para explorar mi perfil.
+                            </div>
+                        </div>
+
+                        <div class="devtools-footer">
+                            <div class="small text-secondary mb-2 font-monospace">
+                                <i class="bi bi-lightbulb text-warning"></i> Comandos sugeridos:
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" class="cmd-chip" data-cmd="camino">
+                                    &gt; mi_camino()
+                                </button>
+                                <button type="button" class="cmd-chip" data-cmd="habilidades">
+                                    &gt; mis_habilidades()
+                                </button>
+                                <button type="button" class="cmd-chip" data-cmd="intereses">
+                                    &gt; fuera_del_codigo()
+                                </button>
+                                <button type="button" class="cmd-chip cmd-jaime" data-cmd="jaime">
+                                    &gt; llamar_a_jaime() 🐾
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto-seccion" id="contacto">
+        <div class="container">
+            
+            <div class="row mb-5">
+                <div class="col text-center">
+                    <h2 class="seccion-titulo">Contacto</h2>
+                    <p class="seccion-subtitulo">¿Tenés una idea, feedback o querés saludar a Jaime? Escribime</p>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center align-items-stretch">
+                
+                <div class="col-lg-5">
+                    <div class="contacto-info-card h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="badge rounded-pill bg-success-subtle text-accent border border-success-subtle px-3 py-2 mb-3">
+                                <i class="bi bi-send-check me-1"></i> Disponible para nuevos desafíos
+                            </span>
+                            <h3 class="fw-bold mb-3">Conectemos</h3>
+                            <p class="acerca-texto mb-4">
+                                Estoy abierto a recibir sugerencias sobre mis proyectos, colaborar en ideas web o seguir aprendiendo nuevas tecnologías de desarrollo.
+                            </p>
+
+                            <div class="email-copy-box mb-4">
+                                <div class="small text-secondary mb-1">Correo electrónico directo:</div>
+                                <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap">
+                                    <span class="fw-semibold font-monospace" id="userEmailText">bfernandezperotti@stbrendans.edu.ar</span>
+                                    <button type="button" id="btnCopyEmail" class="btn btn-sm btn-outline-light rounded-pill px-3">
+                                        <i class="bi bi-clipboard me-1" id="copyIcon"></i>
+                                        <span id="copyBtnText">Copiar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="small text-secondary mb-2">Mis perfiles:</div>
+                            <div class="d-flex gap-3">
+                                <a href="https://github.com/pera-pro" target="_blank" class="social-link-btn">
+                                    <i class="bi bi-github fs-5"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="#portfolio" class="social-link-btn">
+                                    <i class="bi bi-folder2-open fs-5"></i>
+                                    <span>10 Proyectos</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="contacto-form-card h-100">
+                        
+                        <form id="contactForm" action="https://submit-form.com/3Qz0Xeh44" method="POST" class="formulario-contacto">
+                            
+                            <div class="mb-3">
+                                <label class="form-label small text-secondary d-block">Motivo rápido (opcional):</label>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button type="button" class="motivo-chip" data-motivo="Feedback sobre el portfolio">💡 Feedback</button>
+                                    <button type="button" class="motivo-chip" data-motivo="Propuesta de proyecto web">🚀 Proyecto</button>
+                                    <button type="button" class="motivo-chip" data-motivo="Consulta de programación">💻 Consulta</button>
+                                    <button type="button" class="motivo-chip" data-motivo="¡Saludos para Jaime!">🐾 Saludar a Jaime</button>
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="contactName" class="form-label fw-semibold">Nombre</label>
+                                    <input type="text" class="form-control custom-input" id="contactName" placeholder="Tu nombre" required name="nombre">
+                                    <div class="invalid-feedback">Ingresá al menos 2 caracteres.</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="contactEmail" class="form-label fw-semibold">Email</label>
+                                    <input type="email" class="form-control custom-input" id="contactEmail" placeholder="tu@email.com" required name="email">
+                                    <div class="invalid-feedback">Ingresá un correo válido.</div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="contactSubject" class="form-label fw-semibold">Asunto</label>
+                                    <input type="text" class="form-control custom-input" id="contactSubject" placeholder="¿Sobre qué querés hablar?" required name="asunto">
+                                    <div class="invalid-feedback">El asunto no puede estar vacío.</div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-between">
+                                        <label for="contactMessage" class="form-label fw-semibold">Mensaje</label>
+                                        <span class="small text-secondary font-monospace" id="charCounter">0 / 300</span>
+                                    </div>
+                                    <textarea class="form-control custom-input" id="contactMessage" rows="4" maxlength="300" placeholder="Escribí tu mensaje acá..." required name="mensaje"></textarea>
+                                    <div class="invalid-feedback">Escribí un mensaje de al menos 10 caracteres.</div>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <button type="submit" id="btnSubmitContact" class="btn btn-propio w-100 py-2 rounded-pill fw-bold">
+                                        <span id="submitBtnText"><i class="bi bi-send-fill me-2"></i>Enviar mensaje</span>
+                                        <span id="submitSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div id="formSuccessBox" class="text-center py-5 d-none">
+                            <div class="success-icon-circle mx-auto mb-3">
+                                <i class="bi bi-check-lg fs-1"></i>
+                            </div>
+                            <h3 class="fw-bold mb-2" id="successTitle">¡Mensaje enviado!</h3>
+                            <p class="acerca-texto mb-4" id="successBody">
+                                Gracias por escribirme. Te voy a responder a la brevedad.
+                            </p>
+                            <button type="button" id="btnResetForm" class="btn btn-outline-secondary rounded-pill px-4">
+                                Enviar otro mensaje
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-propio text-center py-4">
+        <div class="container">
+            <p class="mb-1 fw-semibold">
+                Desarrollado con <span class="text-accent">&lt;/&gt;</span> por <strong>Benjamín Perotti</strong> (y supervisado por Jaime 🐾)
+            </p>
+            <p class="small text-secondary mb-0">
+                CodeCraft Portfolio • HTML5 • CSS3 • Bootstrap 5.3 • JavaScript
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
